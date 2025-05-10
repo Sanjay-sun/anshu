@@ -1,0 +1,103 @@
+<!-- game.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Time 🎮</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    .quiz {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #ffeef8;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    }
+    .quiz h2 {
+      margin-bottom: 1rem;
+    }
+    .quiz button {
+      display: block;
+      margin: 1rem auto 0;
+      padding: 1rem 2rem;
+      background: pink;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .quiz .result {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-dark" onclick="toggleDarkMode()">🌙</div>
+  <div class="heart-bg"></div>
+
+  <main class="container">
+    <h1 class="typewriter">How Well Do You Know Me, Anshu? 🧠💖</h1>
+    <div class="quiz">
+      <h2>What's my favorite color?</h2>
+      <select id="q1">
+        <option value="">--Choose--</option>
+        <option value="blue">Blue</option>
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="pink">Pink</option>
+      </select>
+
+      <h2>Where would I love to go with you?</h2>
+      <select id="q2">
+        <option value="">--Choose--</option>
+        <option value="paris">Paris</option>
+        <option value="switzerland">Maldives</option>
+        <option value="goa">Goa</option>
+        <option value="manali">Manali</option>
+      </select>
+
+      <h2>What’s my go-to drink?</h2>
+      <select id="q3">
+        <option value="">--Choose--</option>
+        <option value="coffee">Coffee</option>
+        <option value="tea">Tea</option>
+        <option value="juice">Juice</option>
+        <option value="milkshake">Milkshake</option>
+      </select>
+
+      <button onclick="checkQuiz()">Submit Answers 💌</button>
+      <div class="result" id="quizResult"></div>
+    </div>
+    <a href="letter.html" class="enter-button">Continue to Something Sweet 💌</a>
+  </main>
+
+  <script>
+    function checkQuiz() {
+      const q1 = document.getElementById('q1').value;
+      const q2 = document.getElementById('q2').value;
+      const q3 = document.getElementById('q3').value;
+
+      let score = 0;
+      if (q1 === 'black') score++;
+      if (q2 === 'maldives') score++;
+      if (q3 === 'coffee') score++;
+
+      const result = document.getElementById('quizResult');
+      if (score === 3) {
+        result.textContent = "Whoa! You know me better than I know myself, Anshu! 💘🥹";
+      } else if (score === 2) {
+        result.textContent = "Aww, you're close Anshu! I’m still impressed 🥰";
+      } else {
+        result.textContent = "Haha! It's okay, we’ll learn together ❤️";
+      }
+    }
+  </script>
+</body>
+</html>

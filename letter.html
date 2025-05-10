@@ -1,0 +1,70 @@
+<!-- letter.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Letter to Anshu 💌</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    .letter {
+      max-width: 800px;
+      margin: 3rem auto;
+      background: #fff0f5;
+      padding: 2rem;
+      border-radius: 20px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      font-family: 'Open Sans', sans-serif;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .letter::first-letter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff69b4;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bg-music {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-dark" onclick="toggleDarkMode()">🌙</div>
+  <div class="heart-bg"></div>
+  <main class="container">
+    <h1 class="typewriter">A Letter Just For You, Anshu 💖</h1>
+    <div class="letter">
+      Hey Anshu,
+      <br><br>
+      There are some things I’ve been meaning to say — things that go beyond just emotions. You’ve always stood beside me, quietly but powerfully, like an anchor I didn’t even realize I needed.
+      <br><br>
+      You’ve believed in me in moments when I couldn’t see my own worth. You’ve shown up, again and again, not for attention, but because you genuinely care. And I see that. I feel it in every small effort, every random check-in, and every time you try to get a little closer — not because you have to, but because you want to.
+      <br><br>
+      You might not even realize how much your presence means to me. The way you support me — it’s not loud, it’s not dramatic, but it’s real. And that’s rare. You give me the kind of strength that doesn’t need to be shouted to be powerful.
+      <br><br>
+      So here's what I want you to know: I care about you deeply. Not in a casual way, not just for a season — but in a way that respects who you are and how much heart you’ve poured into the people you care about. I notice, and I’ll never take that for granted.
+      <br><br>
+      Whatever comes ahead, just know this: I’m here for you — just like you’ve been here for me.
+      <br><br>
+      — Sanjay
+    </div>
+    <audio class="bg-music" controls autoplay loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <a href="confession.html" class="enter-button">One Last Surprise 💍</a>
+  </main>
+</body>
+</html>
